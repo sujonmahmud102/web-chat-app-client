@@ -7,7 +7,6 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './pages/Login/Login.jsx';
 import Register from './pages/Register/Register.jsx';
 import PrivateRoute from './Routes/PrivateRoute.jsx';
-import ChatApp from './components/ChatApp/ChatApp.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,10 +21,7 @@ const router = createBrowserRouter([
     path: '/register',
     element: <Register />
   },
-  {
-    path: '/new',
-    element: <ChatApp />
-  }
+  
 ])
 
 

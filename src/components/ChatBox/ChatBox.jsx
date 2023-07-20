@@ -6,7 +6,6 @@ import { HiOutlineEmojiHappy } from "react-icons/hi";
 import { AiOutlineSend } from "react-icons/ai";
 import { useState } from "react";
 import useAuth from "../../hook/useAuth";
-import io from 'socket.io-client';
 
 const ChatBox = ({ children }) => {
     const { user } = useAuth();
@@ -21,33 +20,6 @@ const ChatBox = ({ children }) => {
             setEmpty(true);
             return alert('Please type message')
         }
-        const time = new Date();
-
-
-        // Emit the message to the server
-        const socket = io('https://chat-web-app-server.vercel.app');
-
-        socket.emit('chatMessage', { text: message });
-
-
-        // const newMessage = {
-        //     send: message, senderName: user.displayName, senderEmail: user.email, receiverName: children[0].name, receiverEmail: children[0].email, time
-        // }
-        // fetch('https://chat-web-app-server.vercel.app/messages', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(newMessage)
-
-        // }).then(res => res.json())
-        //     .then(data => {
-        //         if (data.insertedId) {
-        //             console.log('ok')
-        //         }
-        //         console.log(data)
-        //     })
-
 
         // console.log(newMessage);
     };

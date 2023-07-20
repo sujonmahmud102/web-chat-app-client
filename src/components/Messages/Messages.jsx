@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../hook/useAuth";
-import io from 'socket.io-client';
 import { AiOutlineSend } from "react-icons/ai";
 import moment from 'moment';
 import EmojiPicker from 'emoji-picker-react';
